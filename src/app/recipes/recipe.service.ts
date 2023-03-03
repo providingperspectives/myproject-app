@@ -1,4 +1,5 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from './recipe.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
@@ -6,9 +7,9 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable()
 export class RecipeService {
-  recipeSelected = new EventEmitter<Recipe>();
+ 
   private recipes: Recipe [ ] = [new Recipe
-    ('The Native Way', 'Change your Entire Concept',
+    ('The Traditional Way', 'Change your Entire Concept',
     'https://i0.wp.com/besthomediet.com/wp-content/uploads/2021/09/Rivers-Native-Soup.jpg',
     [ new Ingredient('Meat',1 ),
       new Ingredient('Draw-Soup',6)]),
